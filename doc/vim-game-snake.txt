@@ -5,11 +5,17 @@ VimGameSnake~
 ==============================================================================
 CONTENTS                                             *vim-game-snake-contents*
 
+    How to configure  .... |vim-game-snake-config|
     How to start ......... |vim-game-snake-start|
     How to play .......... |vim-game-snake-play|
     License .............. |vim-game-snake-license|
     Bugs ................. |vim-game-snake-bugs|
     Contributing ......... |vim-game-snake-contributing|
+
+==============================================================================
+How to configure                                              *vim-game-snake-config*
+    " Change difficulty. Options are easy/hard/godmode. hard is the default.
+    let g:VimSnakeMode = 'hard'
 
 ==============================================================================
 How to start                            *:VimGameSnake* *vim-game-snake-start*

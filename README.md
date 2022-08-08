@@ -13,6 +13,13 @@ h   | j   | k   | l   | c        | q
 --- | --- | --- | --- | ---      | ---
 ←   |↓    |↑    |→    | end game | quit
 
+## How to change mode
+
+put this somewhere in your vim config
+```vim
+let g:VimSnakeMode = 'hard' " easy|hard|godmode - default: hard
+```
+
 ## Installation
 
 ### VimPlug

@@ -1,7 +1,15 @@
 command! VimGameSnake :call s:main()
 
 let g:VimSnakeScore = 0
-let g:VimSnakeSpeed = '20ms'
+let g:VimSnakeMode = 'hard'
+
+let s:gameModes = {
+            \ 'easy': '40ms',
+            \ 'hard': '20ms',
+            \ 'godmode': '1ms',
+            \ }
+
+let s:gameSpeed = s:gameModes[g:VimSnakeMode]
 
 let s:config = {
             \ 'width': 0,
@@ -60,7 +68,7 @@ function! s:main()
             bdelete!
         endif
 
-        exe 'sleep ' . g:VimSnakeSpeed
+        exe 'sleep ' . s:gameSpeed
         redraw
 
     endwhile
@@ -93,6 +101,7 @@ function! s:init()
     call s:createBuffer()
     call s:setLocalSetting()
     call s:setConfig()
+    call s:setGameSpeed()
     call s:setColor()
     call s:drawScreen(s:config, s:item)
     call s:setSnake(s:config['width']/2, s:config['height']/2)
@@ -204,6 +213,10 @@ function! s:setConfig()
     let s:config['limitBottom'] = l:height - l:border
     let s:config['limitLeft'] = l:border
     let s:config['limitRight'] = l:width - l:border
+endfunction
+
+function! s:setGameSpeed()
+  let s:gameSpeed = s:gameModes[g:VimSnakeMode]
 endfunction
 
 function! s:drawScreen(config, item)
