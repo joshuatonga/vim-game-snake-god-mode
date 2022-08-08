@@ -1,6 +1,7 @@
 command! VimGameSnake :call s:main()
 
 let g:VimSnakeScore = 0
+let g:VimSnakeSpeed = '20ms'
 
 let s:config = {
             \ 'width': 0,
@@ -59,7 +60,7 @@ function! s:main()
             bdelete!
         endif
 
-        sleep 100ms
+        exe 'sleep ' . g:VimSnakeSpeed
         redraw
 
     endwhile
