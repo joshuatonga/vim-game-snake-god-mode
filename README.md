@@ -13,11 +13,18 @@ h   | j   | k   | l   | c        | q
 --- | --- | --- | --- | ---      | ---
 ←   |↓    |↑    |→    | end game | quit
 
-## How to change mode
+## How to configure
 
-put this somewhere in your vim config
+Change the game difficulty
 ```vim
 let g:VimSnakeMode = 'hard' " easy|hard|godmode - default: hard
+```
+
+Change the gameover policy
+  - always - restart the game after sneyk died
+  - none - stop the game
+```vim
+let g:VimSnakeRestart = 'always' " always|none - default: always
 ```
 
 ## Installation

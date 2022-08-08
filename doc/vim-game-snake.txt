@@ -17,6 +17,11 @@ How to configure                                              *vim-game-snake-co
     " Change difficulty. Options are easy/hard/godmode. hard is the default.
     let g:VimSnakeMode = 'hard'
 
+    " Change the gameover policy. Options are always/none. always is the default.
+    " always - if the snake is dead, automatically restart the game.
+    " none - the game will just stop
+    let g:VimSnakeRestart = 'always'
+
 ==============================================================================
 How to start                            *:VimGameSnake* *vim-game-snake-start*
 

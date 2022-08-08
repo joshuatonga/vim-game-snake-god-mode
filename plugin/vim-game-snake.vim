@@ -2,6 +2,7 @@ command! VimGameSnake :call s:main()
 
 let g:VimSnakeScore = 0
 let g:VimSnakeMode = 'hard'
+let g:VimSnakeRestart = 'always'
 
 let s:gameModes = {
             \ 'easy': '40ms',
@@ -57,7 +58,18 @@ function! s:main()
 
         let l:isGameOver = s:checkGameOver(s:snake)
 
-        if l:input == 'c' || l:isGameOver == 1
+        if l:input == 'c'
+            break
+        endif
+
+        if l:isGameOver == 1
+            if g:VimSnakeRestart == 'always'
+               bdelete
+               call s:init()
+               let l:food = s:newFood()
+               continue
+            endif
+
             break
         endif
 
