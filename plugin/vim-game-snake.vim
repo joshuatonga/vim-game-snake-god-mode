@@ -5,7 +5,7 @@ let g:VimSnakeMode = 'hard'
 
 let s:gameModes = {
             \ 'easy': '40ms',
-            \ 'hard': '20ms',
+            \ 'hard': '15ms',
             \ 'godmode': '1ms',
             \ }
 
