@@ -7,7 +7,7 @@ let g:VimSnakeRestart = 'always'
 let s:gameModes = {
             \ 'easy': '40ms',
             \ 'hard': '15ms',
-            \ 'godmode': '1ms',
+            \ 'godmode': '8ms',
             \ }
 
 let s:gameSpeed = s:gameModes[g:VimSnakeMode]
