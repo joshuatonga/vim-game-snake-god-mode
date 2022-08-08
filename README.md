@@ -33,7 +33,7 @@ let g:VimSnakeRestart = 'always' " always|none - default: always
 
 Place this in your .vimrc:
 
-> Plug 'johngrib/vim-game-snake'
+> Plug 'joshuatonga/vim-game-snake-hard-mode'
 
 Then run the following in Vim:
 
